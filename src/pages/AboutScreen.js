@@ -5,17 +5,19 @@ import { useNavigation } from '@react-navigation/native'
 export default () => {
   const navigation = useNavigation()
 
-  const handleAboutClick = () => {
-    navigation.navigate('About')
+  const handleBackButton = () => {
+    navigation.goBack() // volta para a tela anterior
+    //navigation.popToTop() // volta para tela 0 do app
   }
 
   return (
     <View style={styles.container}>
-      <Text>HomeScreen</Text>
-      <Button title='Ir para a tela SOBRE' onPress={handleAboutClick} />
+      <Text>Telinha de Sobre</Text>
+      <Button title='Voltar' onPress={handleBackButton} />
     </View>
   )
 }
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
