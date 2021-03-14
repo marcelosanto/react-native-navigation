@@ -3,13 +3,13 @@ import { View, Text, StyleSheet, Button, TextInput } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 
 export default () => {
-  const [name, setName] = useState('')
+  const [cor, setCor] = useState('')
 
   const navigation = useNavigation()
 
   const handleSendButton = () => {
     navigation.navigate('About', {
-      name,
+      cor,
     }) // 2º parametro, envia informacao pra tela seguinte.
   }
 
@@ -18,8 +18,8 @@ export default () => {
       <Text>Qual seu nome? </Text>
       <TextInput
         style={styles.input}
-        value={name}
-        onChangeText={(t) => setName(t)}
+        value={cor}
+        onChangeText={(t) => setCor(t)}
       />
       <Button title='Enviar' onPress={handleSendButton} />
     </View>

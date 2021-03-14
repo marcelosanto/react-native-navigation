@@ -6,7 +6,7 @@ export default () => {
   const navigation = useNavigation()
   const route = useRoute()
 
-  const name = route.params?.name ?? 'Visitante' //pegando a informacao da tela anterior
+  const cor = route.params?.cor ?? '#FF0000' //pegando a informacao da tela anterior
 
   const handleBackButton = () => {
     navigation.goBack() // volta para a tela anterior
@@ -15,7 +15,7 @@ export default () => {
 
   return (
     <View style={styles.container}>
-      <Text>Olá: {name}</Text>
+      <Text>Olá: {cor}</Text>
       <Button title='Voltar' onPress={handleBackButton} />
     </View>
   )
