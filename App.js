@@ -1,14 +1,14 @@
 import React from 'react'
-import {Text, View} from 'react-native'
+import {NavigationContainer} from '@react-navigation/native'
+
+import MainStack from './src/navigators/MainStack'
 
 const App = () => {
   return (
-    <View style={backgroundStyle}>
-      <Text>Oieeeeeeeeeeee</Text>
-    </View>
+    <NavigationContainer>
+      <MainStack />
+    </NavigationContainer>
   )
 }
-
-const styles = StyleSheet.create({})
 
 export default App
